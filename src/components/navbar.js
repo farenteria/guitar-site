@@ -1,5 +1,8 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import Index from "./index.js";
+import Memorizer from "./memorizer.js";
+import About from "./about.js";
 
 const Navbar = () => {
     return(
@@ -17,6 +20,10 @@ const Navbar = () => {
                     </li>
                 </ul>
             </nav>
+
+            <Route path="/" exact component={Index} />
+            <Route path="/memorizer" component={Memorizer} />
+            <Route path="/about" component={About} />
         </Router>
     );
 };
